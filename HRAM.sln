@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRAM.UI", "HRAM.UI\HRAM.UI.csproj", "{7EF5B171-97D6-43CD-9AED-F5D3B02F377C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EF5B171-97D6-43CD-9AED-F5D3B02F377C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF5B171-97D6-43CD-9AED-F5D3B02F377C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF5B171-97D6-43CD-9AED-F5D3B02F377C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF5B171-97D6-43CD-9AED-F5D3B02F377C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DF59AE9-6594-4F4F-A1F5-83722DB2AC0F}
+	EndGlobalSection
+EndGlobal
