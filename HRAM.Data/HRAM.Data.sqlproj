@@ -56,5 +56,21 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="DataBases" />
+    <Folder Include="DataBases\Tables" />
+    <Folder Include="PublishLocations" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishLocations\HRAM.Data.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="DataBases\Tables\User.sql" />
+    <Build Include="DataBases\Tables\Holiday.sql" />
+    <Build Include="DataBases\Tables\Department.sql" />
+    <Build Include="DataBases\Tables\Project.sql" />
+    <Build Include="DataBases\Tables\WorkOn.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="HRAM.Data.refactorlog" />
   </ItemGroup>
 </Project>
