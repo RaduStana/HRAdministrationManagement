@@ -20,5 +20,6 @@
     [Schedule] NVARCHAR(50) NULL, 
     [Man_Id] INT NULL, 
     [Dep_Id] INT NULL, 
-    [Hol_id] INT NULL
+    [Hol_id] INT NULL, 
+    [Password] NVARCHAR(50) NULL
 )
