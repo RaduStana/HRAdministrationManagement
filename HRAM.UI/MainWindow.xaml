@@ -12,7 +12,7 @@
         xmlns:viewmodels="clr-namespace:HRAM.UI.ViewModels"
         xmlns:views="clr-namespace:HRAM.UI.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="550" Width="1000"
         DataContext="{Binding Source={x:Static viewmodels:MainViewModel.Instance}}">
 
     <Window.Resources>

@@ -107,12 +107,24 @@
     <Compile Include="ViewModels\Commands\DelegateCommand.cs" />
     <Compile Include="ViewModels\Commands\ViewModelCommands.cs" />
     <Compile Include="ViewModels\FluxViewModel.cs" />
+    <Compile Include="ViewModels\Flux\CertificatesViewModel.cs" />
+    <Compile Include="ViewModels\Flux\HolidaysViewModel.cs" />
+    <Compile Include="ViewModels\Flux\ModifyPersDataViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />
     <Compile Include="Views\FluxView.xaml.cs">
       <DependentUpon>FluxView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Flux\CertificatesView.xaml.cs">
+      <DependentUpon>CertificatesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Flux\HoldaysView.xaml.cs">
+      <DependentUpon>HoldaysView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Flux\ModifyPersDataView.xaml.cs">
+      <DependentUpon>ModifyPersDataView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
@@ -136,6 +148,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\FluxView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Flux\CertificatesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Flux\HoldaysView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Flux\ModifyPersDataView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

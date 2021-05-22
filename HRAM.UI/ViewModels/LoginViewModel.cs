@@ -37,7 +37,6 @@ namespace HRAM.UI.ViewModels
                 bool output = false;
                 if (emailAddress?.Length > 0 && password?.Length > 0)
                     return true;
-
                 return output;
             }
         }
