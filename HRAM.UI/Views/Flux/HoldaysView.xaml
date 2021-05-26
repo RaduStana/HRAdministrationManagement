@@ -7,6 +7,31 @@
              mc:Ignorable="d" Background="AliceBlue"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">An</TextBlock>
+        <ComboBox Grid.Row="2" Grid.Column="1"></ComboBox>
+        <ListBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4"></ListBox>
+
+        <GroupBox Header="Balanta" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="4">
+            <ListBox></ListBox>
+        </GroupBox>
+
+        <Button Grid.Column="1" Grid.Row="6">Creare cerere</Button>
     </Grid>
 </UserControl>

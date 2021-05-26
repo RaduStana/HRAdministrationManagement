@@ -52,7 +52,7 @@
     </Window.Triggers>
 
     <Grid Background="Black">
-
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition MaxWidth="70"/>
             <ColumnDefinition />
@@ -79,6 +79,7 @@
                         <Button Content="Help"/>
                         <Separator/>
                         <Button Content="Logout"/>
+                        <Label Content="MainWindowView"/>
                     </StackPanel>
                 </materialDesign:PopupBox>
             </StackPanel>

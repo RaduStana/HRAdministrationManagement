@@ -8,7 +8,7 @@
     [Bday] DATETIME NULL ,
     [Id_batch] NVARCHAR(2) NULL, 
     [Id_number] INT NULL, 
-    [E-mail] NVARCHAR(10) NULL, 
+    [E-mail] NVARCHAR(50) NULL, 
     [Phone_number] INT NULL, 
     [Salary] MONEY NULL, 
     [Gender] NVARCHAR(10) NULL, 
@@ -21,5 +21,5 @@
     [Man_Id] INT NULL, 
     [Dep_Id] INT NULL, 
     [Hol_id] INT NULL, 
-    [Password] NVARCHAR(50) NULL
+    [Password] NVARCHAR(50) NULL 
 )

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,42 @@ namespace HRAM.UI.Views
         public LoginView()
         {
             InitializeComponent();
+        }
+
+        private void LogIn_Click(object sender, RoutedEventArgs e)
+        {
+            SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=HRAMDATA; Integrated Security=True;");
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                    sqlCon.Open();
+                String query = "SELECT COUNT(1) FROM dbo.[User] WHERE Firstname=@Firstname AND Password=@Password";
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon)
+                {
+                    CommandType = CommandType.Text
+                };
+                sqlCmd.Parameters.AddWithValue("@Firstname", EmailAddress.Text);
+                sqlCmd.Parameters.AddWithValue("@Password", Password.Password);
+                int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                if (count == 1)
+                {
+                    MainWindow MainWindowView = new MainWindow();
+                    MainWindowView.Show();
+                    System.Windows.Forms.Application.Exit();
+                }
+                else
+                {
+                    MessageBox.Show("Username or password is incorrect.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlCon.Close();
+            }
         }
     }
 }

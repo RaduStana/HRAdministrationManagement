@@ -1,12 +1,18 @@
-﻿using System;
+﻿using Caliburn.Micro;
+using Convertor.ViewModels.Commands;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace HRAM.UI.ViewModels
 {
-    public class LoginViewModel : BindableBase
+    public class LoginViewModel : Screen
     {
         private string emailAddress;
         public string EmailAddress
@@ -15,36 +21,40 @@ namespace HRAM.UI.ViewModels
             set {
                 if (emailAddress != value)
                     emailAddress = value;
-                OnPropertyChanged();
+                NotifyOfPropertyChange(() => EmailAddress);
+                //NotifyOfPropertyChange(() => CanLogIn);
             }
         }
 
-        private string password;
+        private string password; 
         public string Password
         {
             get { return password; }
             set {
                 if (password != value)
                     password = value;
-                OnPropertyChanged();
+                NotifyOfPropertyChange(() => Password);
+                //NotifyOfPropertyChange(() => CanLogIn);
             }
         }
-
-        public bool LoginCheck
+        /*public bool CanLogIn
         {
             get
             {
                 bool output = false;
-                if (emailAddress?.Length > 0 && password?.Length > 0)
-                    return true;
+
+                if (EmailAddress?.Length > 0 && Password?.Length > 0)
+                {
+                    output = true;
+                }
+
                 return output;
             }
         }
 
-        public void Login()
+        public void LogIn(string email, string password)
         {
-            Console.WriteLine("LOGIN");
-        }
-
+            Console.WriteLine();
+        }*/
     }
 }
