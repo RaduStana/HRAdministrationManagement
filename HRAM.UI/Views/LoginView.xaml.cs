@@ -14,19 +14,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HRAM.UI.ViewModels;
+using HRAM.UI.Models;
 
 namespace HRAM.UI.Views
 {
-    /// <summary>
-    /// Interaction logic for LoginView.xaml
-    /// </summary>
     public partial class LoginView : UserControl
     {
         public LoginView()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
-
+        public static String _EmailLog;
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
             SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=HRAMDATA; Integrated Security=True;");
@@ -34,12 +33,15 @@ namespace HRAM.UI.Views
             {
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
-                String query = "SELECT COUNT(1) FROM dbo.[User] WHERE Firstname=@Firstname AND Password=@Password";
+                String query = "SELECT COUNT(1) FROM dbo.[User] WHERE Email=@Email AND Password=@Password";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon)
                 {
                     CommandType = CommandType.Text
                 };
-                sqlCmd.Parameters.AddWithValue("@Firstname", EmailAddress.Text);
+
+                _EmailLog = EmailAddress.Text;
+
+                sqlCmd.Parameters.AddWithValue("@Email", EmailAddress.Text);
                 sqlCmd.Parameters.AddWithValue("@Password", Password.Password);
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                 if (count == 1)
@@ -47,6 +49,7 @@ namespace HRAM.UI.Views
                     MainWindow MainWindowView = new MainWindow();
                     MainWindowView.Show();
                     System.Windows.Forms.Application.Exit();
+                    Window.GetWindow(this).Close();
                 }
                 else
                 {

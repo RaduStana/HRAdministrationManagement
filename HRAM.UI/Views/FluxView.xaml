@@ -8,8 +8,8 @@
              xmlns:viewmodels="clr-namespace:HRAM.UI.ViewModels.Flux"
              xmlns:viewmodel="clr-namespace:HRAM.UI.ViewModels"
              xmlns:views="clr-namespace:HRAM.UI.Views.Flux" d:DataContext="{d:DesignInstance Type=viewmodel:FluxViewModel}"
-             mc:Ignorable="d" HorizontalAlignment="Center"
-             d:DesignHeight="550" d:DesignWidth="1000" Background="Blue">
+             mc:Ignorable="d"
+             d:DesignHeight="550" d:DesignWidth="1200" Background="White">
     <UserControl.Resources>
         <DataTemplate x:Name="HoldayTemplate" DataType="{x:Type viewmodels:HolidaysViewModel}">
             <views:HoldaysView DataContext="{Binding}"/>

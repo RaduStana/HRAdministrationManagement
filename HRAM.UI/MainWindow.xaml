@@ -78,16 +78,16 @@
                         <Button Content="Account" Command="{Binding LoginCommand}"/>
                         <Button Content="Help"/>
                         <Separator/>
-                        <Button Content="Logout"/>
-                        <Label Content="MainWindowView"/>
+                        <Button Content="Logout" Command="{Binding LoginCommand}"/>
+                        <Label Content="MainWindowView" Visibility="Hidden"/>
                     </StackPanel>
                 </materialDesign:PopupBox>
             </StackPanel>
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">HR Administration and Management</TextBlock>
         </Grid>
-        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="5" x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#FF31577E">
+        <Grid Panel.ZIndex="1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="5" x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#FF31577E">
             <Grid.Effect>
-                <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
+                <DropShadowEffect  BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
             </Grid.Effect>
             <StackPanel>
                 <Grid Height="60" Background="White" RenderTransformOrigin="0.5,0.5">
@@ -135,6 +135,6 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        <ContentControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="4" Content="{Binding CurrentView}"/>
+        <ContentControl Panel.ZIndex="0" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="4" Content="{Binding CurrentView}"/>
     </Grid>
 </reactiveui:ReactiveWindow>

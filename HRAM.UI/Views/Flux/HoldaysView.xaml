@@ -19,19 +19,20 @@
             <RowDefinition Height="20"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition ></RowDefinition>
             <RowDefinition Height="20"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">An</TextBlock>
         <ComboBox Grid.Row="2" Grid.Column="1"></ComboBox>
-        <ListBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4"></ListBox>
+        <ListBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4" Background="Turquoise"></ListBox>
 
-        <GroupBox Header="Balanta" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="4">
-            <ListBox></ListBox>
+        <GroupBox Header="Balanta" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4">
+            <ListBox Background="Turquoise"></ListBox>
         </GroupBox>
 
-        <Button Grid.Column="1" Grid.Row="6">Creare cerere</Button>
+        <Button Grid.Column="1" Grid.Row="7">Creare cerere</Button>
     </Grid>
 </UserControl>
