@@ -4,9 +4,36 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HRAM.UI.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Background="red">
+             mc:Ignorable="d" FontSize="14" FontWeight="Bold"
+             d:DesignHeight="550" d:DesignWidth="900" Background="White">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" Margin="0 30 0 0" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="2" Content=" Universitatea Politehnica Timișoara"/>
+        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Content=" Facultatea de Automatică și Calculatoare"/>
+        <Label Grid.Row="1" HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Bottom" Margin="0 30" Content="Departamentul Calculatoare și "/>
+        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="2" Content="Tehnologia Informației"/>
+        <Image Grid.Row="1" Grid.Column="1" Source="C:\Users\Admin\source\repos\HRAdministrationManagement\HRAM.UI\Img\AC-CTIlogo.JPG"/>
+        <Image Grid.Row="1" Grid.Column="3" Source="C:\Users\Admin\source\repos\HRAdministrationManagement\HRAM.UI\Img\UPTlogo.JPG"/>
+        <Label FontSize="20" HorizontalAlignment="Center" Grid.ColumnSpan="3" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Content="Sistem informatic pentru gestiunea și"/>
+        <Label FontSize="20" HorizontalAlignment="Center" Grid.ColumnSpan="3" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="1" Content="administrarea resurselor umane dintr-o companie"/>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" Content="Coordonator:"/>
+        <Label VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" Content="Conf. dr. ing. Prodan Lucian"/>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="3" Content="Student:"/>
+        <Label VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="3" Content="Stana Radu"/>
     </Grid>
 </UserControl>

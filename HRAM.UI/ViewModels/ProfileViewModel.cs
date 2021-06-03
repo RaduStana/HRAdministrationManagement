@@ -14,44 +14,127 @@ namespace HRAM.UI.ViewModels
         public ProfileViewModel()
         {
             email = LoginView._EmailLog;
-            populateEm();
-            lastname = employee.LastName;
-            add = employee.Adress;
-            cnp = employee.CNP;
-            bday = employee.Bday;
+            PopulateEm();
+            lastName = employee.LastName;
         }
         private static Employee employee = new Employee();
-        public void populateEm()
+        public static int GetEmployeeUserId()
+        {
+            return employee.UserId;
+        }
+        public void PopulateEm()
         {
             employee = DataAccess.GetEmployee(email);
         }
-        private DateTime bday;
+        public string Schedule
+        {
+            get => employee.Schedule;
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public DateTime EmploymentDate
+        {
+            get => employee.EmploymentDate;
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public string Position
+        {
+            get => employee.Position;
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public string Language
+        {
+            get => employee.Languages;
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public string Nationality
+        {
+            get => employee.Nationality;
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public string CivilStatus
+        {
+            get => employee.CivilStatus;
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public string Gender
+        {
+            get => employee.Gender;
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public int Salary
+        {
+            get => employee.Salary;
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public string PhoneNumber
+        {
+            get => employee.PhoneNumber;
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public string IdBatch
+        {
+            get => employee.IdBatch;
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
+        public int IdNum
+        {
+            get => employee.IdNumber;
+            set
+            {
+                OnPropertyChanged();
+            }
+        }
         public DateTime BDay
         {
-            get => bday;
+            get => employee.Bday;
             set
             {
-                bday = value;
                 OnPropertyChanged();
             }
         }
-        private long cnp;
         public long CNP 
         { 
-            get => cnp; 
+            get => employee.CNP; 
             set
             {
-                cnp = value;
                 OnPropertyChanged();
             }
         }
-        private string add = "";
         public string Add
         {
-            get { return add; }
+            get => employee.Adress; 
             set
             {
-                add = value;
                 OnPropertyChanged();
             }
         }
@@ -65,13 +148,20 @@ namespace HRAM.UI.ViewModels
                 OnPropertyChanged();
             }
         }
-        private string lastname = "";
+        private string lastName;
         public string LastName
         {
-            get { return lastname; }
+            get => lastName;
             set
             {
-                lastname = value;
+                OnPropertyChanged();
+            }
+        }
+        public string FirstName
+        {
+            get => employee.FirstName;
+            set
+            {
                 OnPropertyChanged();
             }
         }

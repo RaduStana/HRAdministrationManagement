@@ -26,6 +26,7 @@ namespace HRAM.UI.Views
             InitializeComponent(); 
         }
         public static String _EmailLog;
+
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
             SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=HRAMDATA; Integrated Security=True;");
@@ -33,7 +34,7 @@ namespace HRAM.UI.Views
             {
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
-                String query = "SELECT COUNT(1) FROM dbo.[User] WHERE Email=@Email AND Password=@Password";
+                string query = "SELECT COUNT(1) FROM dbo.[User] WHERE Email=@Email AND Password=@Password";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon)
                 {
                     CommandType = CommandType.Text

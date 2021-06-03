@@ -19,6 +19,7 @@ namespace HRAM.UI.ViewModels
         public ICommand ListSelectionChangedCommand { get; set; }
         public MainViewModel()
         {
+            CurrentView = new HomeViewModel();
             LoginCommand = new ViewModelCommands(LoginComm);
             ListSelectionChangedCommand = new DelegateCommand(Comm);
         }

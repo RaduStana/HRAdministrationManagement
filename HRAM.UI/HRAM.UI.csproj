@@ -148,6 +148,7 @@
     <Compile Include="Helpers\DataAccess.cs" />
     <Compile Include="Helpers\FallbackTypeMapper.cs" />
     <Compile Include="Helpers\SqlConnectionHelper.cs" />
+    <Compile Include="Models\CountHolidayScales.cs" />
     <Compile Include="Models\Deparment.cs" />
     <Compile Include="Models\Dependent.cs" />
     <Compile Include="Models\Holiday.cs" />
@@ -165,6 +166,7 @@
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />
+    <Compile Include="ViewModels\RequestHolidayViewModel.cs" />
     <Compile Include="Views\FluxView.xaml.cs">
       <DependentUpon>FluxView.xaml</DependentUpon>
     </Compile>
@@ -185,6 +187,9 @@
     </Compile>
     <Compile Include="Views\ProfileView.xaml.cs">
       <DependentUpon>ProfileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequestHolidayView.xaml.cs">
+      <DependentUpon>RequestHolidayView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -226,6 +231,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\RequestHolidayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -260,7 +269,10 @@
       <Name>HRAM.Data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Img\AC-CTIlogo.JPG" />
+    <Resource Include="Img\UPTlogo.JPG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

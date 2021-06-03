@@ -3,36 +3,65 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:HRAM.UI.Views.Flux"
+             xmlns:local="clr-namespace:HRAM.UI.Views.Flux" xmlns:flux="clr-namespace:HRAM.UI.ViewModels.Flux" d:DataContext="{d:DesignInstance Type=flux:HolidaysViewModel}"
              mc:Ignorable="d" Background="AliceBlue"
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="500" d:DesignWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="80"></ColumnDefinition>
+            <ColumnDefinition Width="70"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="250"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition Width="20"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto" ></RowDefinition>
+            <RowDefinition Height="auto" ></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="125"></RowDefinition>
             <RowDefinition Height="20"></RowDefinition>
-            <RowDefinition ></RowDefinition>
-            <RowDefinition Height="20"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="180"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">An</TextBlock>
-        <ComboBox Grid.Row="2" Grid.Column="1"></ComboBox>
-        <ListBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4" Background="Turquoise"></ListBox>
+        
+        <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">Year</TextBlock>
+        <ComboBox Grid.Row="2" Grid.Column="1" ItemsSource="{Binding YearCombo}" SelectedIndex="0" />
+        <Label Grid.Row="3" Grid.Column="1" Content="From"/>
+        <Label Grid.Row="3" Grid.Column="2" Content="To"/>
+        <Label Grid.Row="3" Grid.Column="3" Content="Days"/>
+        <Label Grid.Row="3" Grid.Column="4" Content="Type"/>
+        <Label Grid.Row="3" Grid.Column="5" Content="Comments"/>
+        <Label Grid.Row="3" Grid.Column="6" Content="State"/>
+        <ListView ItemsSource="{Binding HolidaysObservableCollection,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" DisplayMemberPath="fullInfo" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="6"/>
 
-        <GroupBox Header="Balanta" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4">
-            <ListBox Background="Turquoise"></ListBox>
+        <GroupBox Header="Scales" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="6" >
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content=" "/>
+                    <Separator Margin="60 0"/>
+                    <Label Content="Total  Days"/>
+                    <Separator Margin="70 0"/>
+                    <Label Content="Days"/>
+                    <Separator Margin="100 0"/>
+                    <Label Content="Difference"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Holiday/Year"/>
+                        <Separator Margin="0 4"/>
+                        <Label Content="Planned"/>
+                        <Separator Margin="0 4"/>
+                        <Label Content="Remaining"/>
+                    </StackPanel>
+                    <ListView FontSize="12" Height="auto" ItemsSource="{Binding ScaleObsColl,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" DisplayMemberPath="FullInfo"/>
+                </StackPanel>
+            </StackPanel>            
         </GroupBox>
 
-        <Button Grid.Column="1" Grid.Row="7">Creare cerere</Button>
+        <Button Grid.Column="1" Grid.Row="7" Content="Make a request" Command="{Binding RequestHolidayCommand}"/>
     </Grid>
 </UserControl>

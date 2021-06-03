@@ -5,15 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HRAM.UI.Views"
              xmlns:viewmodel="clr-namespace:HRAM.UI.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodel:ProfileViewModel}"
-             mc:Ignorable="d" FontSize="20"
-             d:DesignHeight="450" d:DesignWidth="800" Background="Green">
+             mc:Ignorable="d" FontSize="20" FontWeight="Bold"
+             d:DesignHeight="450" d:DesignWidth="800" Background="White">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="auto"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="20"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -23,23 +21,52 @@
             <RowDefinition ></RowDefinition>
             <RowDefinition ></RowDefinition>
             <RowDefinition ></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="4">
+        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="5">
             <StackPanel HorizontalAlignment="Left" Orientation="Vertical">
                 <Label Content="Email" Background="White"/>
+                <Label Content="FirstName" Background="White"/>
                 <Label Content="LastName" Background="White"/>
                 <Label Content="Add" Background="White"/>
                 <Label Content="Cnp" Background="White"/>
                 <Label Content="bDay" Background="White"/>
+                <Label Content="Serie bul" Background="White"/>
+                <Label Content="Nr bul" Background="White"/>
+                <Label Content="Numar tel" Background="White"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Right" Orientation="Vertical">
                 <Label Content="{Binding Path=Email}" Background="White"/>
+                <Label Content="{Binding Path=FirstName}" Background="White"/>
                 <Label Content="{Binding Path=LastName}" Background="White"/>
                 <Label Content="{Binding Path=Add}" Background="White"/>
                 <Label Content="{Binding Path=CNP}" Background="White"/>
                 <Label Content="{Binding Path=BDay}" Background="White"/>
+                <Label Content="{Binding Path=IdBatch}" Background="White"/>
+                <Label Content="{Binding Path=IdNum}" Background="White"/>
+                <Label Content="{Binding Path=PhoneNumber}" Background="White"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" Grid.RowSpan="7">
+            <StackPanel HorizontalAlignment="Left" Orientation="Vertical">
+                <Label Content="Salar" Background="White"/>
+                <Label Content="Gen" Background="White"/>
+                <Label Content="Stare civila" Background="White"/>
+                <Label Content="Nationalitate" Background="White"/>
+                <Label Content="Limbi vorbite" Background="White"/>
+                <Label Content="Pozitie" Background="White"/>
+                <Label Content="Data angajare" Background="White"/>
+                <Label Content="Program" Background="White"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right" Orientation="Vertical">
+                <Label Content="{Binding Path=Salary}" Background="White"/>
+                <Label Content="{Binding Path=Gender}" Background="White"/>
+                <Label Content="{Binding Path=CivilStatus}" Background="White"/>
+                <Label Content="{Binding Path=Nationality}" Background="White"/>
+                <Label Content="{Binding Path=Language}" Background="White"/>
+                <Label Content="{Binding Path=Position}" Background="White"/>
+                <Label Content="{Binding Path=EmploymentDate}" Background="White"/>
+                <Label Content="{Binding Path=Schedule}" Background="White"/>
             </StackPanel>
         </Grid>
     </Grid>

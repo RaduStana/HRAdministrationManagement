@@ -38,10 +38,10 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <DockPanel Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3">
-            <Menu DockPanel.Dock="Top" HorizontalAlignment="Center">
-                <Button Content="Holiday" Command="{Binding HolidayCommand}"></Button>
-                <Button Content="Modifty Personal Data" Command="{Binding MPDCommand}"></Button>
-                <Button Content="Certificates" Command="{Binding CertificatesCommand}" ></Button>
+            <Menu DockPanel.Dock="Top" HorizontalAlignment="Center" Background="White">
+                <Button Content="Holiday" Command="{Binding HolidayCommand}"/>
+                <Button Content="Modifty Personal Data" Command="{Binding MPDCommand}"/>
+                <Button Content="Certificates" Command="{Binding CertificatesCommand}" />
             </Menu>
         </DockPanel>
         <ContentControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="5" Content="{Binding CurrentView}"/>

@@ -12,7 +12,7 @@
         xmlns:viewmodels="clr-namespace:HRAM.UI.ViewModels"
         xmlns:views="clr-namespace:HRAM.UI.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="MainWindow" Height="550" Width="1000"
+        Title="MainWindow" Height="650" Width="1250"
         DataContext="{Binding Source={x:Static viewmodels:MainViewModel.Instance}}">
 
     <Window.Resources>
@@ -74,9 +74,7 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
                     <StackPanel Width="150">
-                        <Button Content="Settings"/>
-                        <Button Content="Account" Command="{Binding LoginCommand}"/>
-                        <Button Content="Help"/>
+                        <Button Content="Admin Settings" />
                         <Separator/>
                         <Button Content="Logout" Command="{Binding LoginCommand}"/>
                         <Label Content="MainWindowView" Visibility="Hidden"/>
@@ -135,6 +133,6 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        <ContentControl Panel.ZIndex="0" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="4" Content="{Binding CurrentView}"/>
+        <ContentControl Panel.ZIndex="0" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="4" Content="{Binding CurrentView}" />
     </Grid>
 </reactiveui:ReactiveWindow>

@@ -18,12 +18,12 @@ namespace HRAM.UI.Models
         public string IdBatch { get; set; }
         public int IdNumber { get; set; }
         public string Email { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public int Salary { get; set; }
         public string Gender { get; set; }
         public string CivilStatus { get; set; }
         public string Nationality { get; set; }
-        public string Language { get; set; }
+        public string Languages { get; set; }
         public string Position { get; set; }
         public DateTime EmploymentDate { get; set; }
         public string Schedule { get; set; }
