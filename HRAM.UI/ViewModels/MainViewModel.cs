@@ -14,6 +14,7 @@ namespace HRAM.UI.ViewModels
     public class MainViewModel : BindableBase
     {
         public ICommand LoginCommand { get; }
+        public ICommand AdminCommand { get; }
         public object CurrentView { get; set; }
         public static MainViewModel Instance { get; } = new MainViewModel();
         public ICommand ListSelectionChangedCommand { get; set; }
@@ -21,6 +22,7 @@ namespace HRAM.UI.ViewModels
         {
             CurrentView = new HomeViewModel();
             LoginCommand = new ViewModelCommands(LoginComm);
+            AdminCommand = new ViewModelCommands(AdminComm);
             ListSelectionChangedCommand = new DelegateCommand(Comm);
         }
         private void Comm(object args)
@@ -33,6 +35,11 @@ namespace HRAM.UI.ViewModels
                 CurrentView = new ProfileViewModel();
             else
                 CurrentView = new FluxViewModel();
+            OnPropertyChanged("CurrentView");
+        }
+        public void AdminComm()
+        {
+            CurrentView = new AdminViewModel();
             OnPropertyChanged("CurrentView");
         }
         public void LoginComm()

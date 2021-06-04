@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="HRAM.UI.Views.AdminView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HRAM.UI.Views"
+             xmlns:viewmodel="clr-namespace:HRAM.UI.ViewModels"
+             xmlns:viewmodels="clr-namespace:HRAM.UI.ViewModels.Admin"
+             xmlns:views="clr-namespace:HRAM.UI.Views.Admin" d:DataContext="{d:DesignInstance Type=viewmodel:AdminViewModel}"
+             mc:Ignorable="d" Background="White"             
+             d:DesignHeight="550" d:DesignWidth="1200">
+    <UserControl.Resources>
+        <DataTemplate x:Name="OverviewTemplate" DataType="{x:Type viewmodels:OverviewViewModel}">
+            <views:OverviewView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ReportsTemplate" DataType="{x:Type viewmodels:ReportsViewModel}">
+            <views:ReportsView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="HolidayCheckTemplate" DataType="{x:Type viewmodels:HolidayCheckViewModel}">
+            <views:HolidaycheckView DataContext="{Binding}"/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3">
+            <Menu DockPanel.Dock="Top" HorizontalAlignment="Center" Background="White">
+                <Button Content="Overview" Command="{Binding OverviewCommand}"/>
+                <Button Content="Reports" Command="{Binding ReportsCommand}"/>
+                <Button Content="HolidayCheck" Command="{Binding HolidayCheckCommand}" />
+            </Menu>
+        </DockPanel>
+        <ContentControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="5" Content="{Binding CurrentView}"/>
+    </Grid>
+</UserControl>

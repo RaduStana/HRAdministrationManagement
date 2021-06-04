@@ -28,6 +28,9 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <DataTemplate x:Name="AdminTemplate" DataType="{x:Type viewmodels:AdminViewModel}">
+            <views:AdminView DataContext="{Binding}"/>
+        </DataTemplate>
         <DataTemplate x:Name="LoginTemplate" DataType="{x:Type viewmodels:LoginViewModel}">
             <views:LoginView DataContext="{Binding}"/>
         </DataTemplate>
@@ -51,8 +54,7 @@
         </EventTrigger>
     </Window.Triggers>
 
-    <Grid Background="Black">
-        
+    <Grid Background="Black">        
         <Grid.ColumnDefinitions>
             <ColumnDefinition MaxWidth="70"/>
             <ColumnDefinition />
@@ -74,7 +76,7 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
                     <StackPanel Width="150">
-                        <Button Content="Admin Settings" />
+                        <Button Content="Admin Settings" Command="{Binding AdminCommand}"/>
                         <Separator/>
                         <Button Content="Logout" Command="{Binding LoginCommand}"/>
                         <Label Content="MainWindowView" Visibility="Hidden"/>
