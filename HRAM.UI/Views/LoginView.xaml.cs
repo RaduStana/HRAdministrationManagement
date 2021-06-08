@@ -32,18 +32,17 @@ namespace HRAM.UI.Views
             SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=HRAMDATA; Integrated Security=True;");
             try
             {
+                _EmailLog = EmailAddress.Text;
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
-                string query = "SELECT COUNT(1) FROM dbo.[User] WHERE Email=@Email AND Password=@Password";
+                string query = "user_Login";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon)
                 {
-                    CommandType = CommandType.Text
+                    CommandType = CommandType.StoredProcedure
                 };
-
-                _EmailLog = EmailAddress.Text;
-
                 sqlCmd.Parameters.AddWithValue("@Email", EmailAddress.Text);
                 sqlCmd.Parameters.AddWithValue("@Password", Password.Password);
+
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                 if (count == 1)
                 {

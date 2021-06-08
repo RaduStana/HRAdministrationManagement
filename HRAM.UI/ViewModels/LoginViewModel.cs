@@ -12,7 +12,7 @@ using System.Windows.Input;
 
 namespace HRAM.UI.ViewModels
 {
-    public class LoginViewModel : Screen
+    public class LoginViewModel : BindableBase
     {
         private string emailAddress;
         public string EmailAddress
@@ -21,7 +21,7 @@ namespace HRAM.UI.ViewModels
             set {
                 if (emailAddress != value)
                     emailAddress = value;
-                NotifyOfPropertyChange(() => EmailAddress);
+                
                 //NotifyOfPropertyChange(() => CanLogIn);
             }
         }
@@ -33,7 +33,6 @@ namespace HRAM.UI.ViewModels
             set {
                 if (password != value)
                     password = value;
-                NotifyOfPropertyChange(() => Password);
                 //NotifyOfPropertyChange(() => CanLogIn);
             }
         }

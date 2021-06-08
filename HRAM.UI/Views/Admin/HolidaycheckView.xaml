@@ -4,9 +4,37 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HRAM.UI.Views.Admin"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" Background="white"
+             d:DesignHeight="550" d:DesignWidth="1000">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="List of holiday not approved" FontSize="24" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="8" HorizontalAlignment="Center"/>
+        
+        <DataGrid Background="White" x:Name="datagrid" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="3"/>
+
+        <Label Content="HolidayId" Grid.Row="6" Grid.Column="2"/>
+        <TextBox x:Name="holidayid_txt" Grid.Row="6" Grid.Column="3"/>
+        <Button Click="UpdateButton" Content="Update Holiday" Grid.Row="6" Grid.Column="5"/>
     </Grid>
 </UserControl>

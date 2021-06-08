@@ -4,9 +4,40 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HRAM.UI.Views.Admin"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" Background="White" FontSize="14" FontWeight="Black"
+             d:DesignHeight="550" d:DesignWidth="1000">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition  Height="auto"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <DataGrid Background="White" x:Name="datagrid" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="5" Grid.RowSpan="7"/>
+
+        <Label Content="DepartementId" Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="departementId_txt" Grid.Row="1" Grid.Column="2"/>
+
+        <Label Content="ProjectId" Grid.Row="2" Grid.Column="1"/>
+        <TextBox x:Name="projectId_txt" Grid.Row="2" Grid.Column="2"/>
+
+        <Button Click="LoadDataGrid" Content="Show" Grid.Column="2" Grid.Row="5"/>
     </Grid>
 </UserControl>

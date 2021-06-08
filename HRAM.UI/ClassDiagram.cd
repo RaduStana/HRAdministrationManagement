@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HRAM.UI.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAQAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.Helpers.DataAccess" Collapsed="true">
+    <Position X="17" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\DataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.Helpers.SqlConnectionHelper" Collapsed="true">
+    <Position X="21.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Helpers\SqlConnectionHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.Models.CountHolidayScales" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAACAAAAAAAAAAAAAAAQQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\CountHolidayScales.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.Models.Deparment" Collapsed="true">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAgACAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Models\Deparment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.Models.Dependent" Collapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAwAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Models\Dependent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.Models.Employee" Collapsed="true">
+    <Position X="8.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAECCACAAGgAAEEQAgAAGgAAAAAAABAAAhACAg=</HashCode>
+      <FileName>Models\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.Models.Holiday" Collapsed="true">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAARAgIAAAAAAAgAAAAAAAAAIQAABAAAAAA=</HashCode>
+      <FileName>Models\Holiday.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.Models.Project" Collapsed="true">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAACAAAAAAABAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Models\Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.Models.WorkOn" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAgAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Models\WorkOn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.Admin.HolidayCheckViewModel" Collapsed="true">
+    <Position X="22" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Admin\HolidayCheckViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.Admin.OverviewViewModel" Collapsed="true">
+    <Position X="20.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAECAACBAAAEgAAAgAAAAAAAAAAACQAAACgAAAAg=</HashCode>
+      <FileName>ViewModels\Admin\OverviewViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.Admin.ReportsViewModel" Collapsed="true">
+    <Position X="18.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Admin\ReportsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.AdminViewModel" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAACAAAAAAAAAAAEAAAAAAAAAQAAIEAAAAEAAAA=</HashCode>
+      <FileName>ViewModels\AdminViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.BindableBase" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\BindableBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.FluxViewModel" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAICAAAAAAUAAAQAAAAAAAAAAAAAAACAAAAAAAE=</HashCode>
+      <FileName>ViewModels\FluxViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.LoginViewModel" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAA=</HashCode>
+      <FileName>ViewModels\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.MainViewModel" Collapsed="true">
+    <Position X="11" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAUAACAAAAAAAAAAAAIAAQAAAAAACAQAAAAACAAAA=</HashCode>
+      <FileName>ViewModels\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.ProfileViewModel" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAWAACCAAwCGgAAEMYAAAAGAAAAAAAAAACAAACAg=</HashCode>
+      <FileName>ViewModels\ProfileViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.RequestHolidayViewModel" Collapsed="true">
+    <Position X="8.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAEAAAICAAIAAgACAAoAAAACAAAAAAQAAECAAAABg=</HashCode>
+      <FileName>ViewModels\RequestHolidayViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.Commands.DelegateCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQEACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Commands\DelegateCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="Convertor.ViewModels.Commands.ViewModelCommands" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Commands\ViewModelCommands.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.Flux.CertificatesViewModel" Collapsed="true">
+    <Position X="3.5" Y="2.25" Width="1.5" />
+    <Members>
+      <Property Name="Date" Hidden="true" />
+      <Property Name="Instance" Hidden="true" />
+      <Property Name="KeyEmployee" Hidden="true" />
+      <Property Name="Reason" Hidden="true" />
+      <Property Name="SubmitCommand" Hidden="true" />
+      <Property Name="TypeCombo" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAgAAAAIBAAQAAAAEAIAAAAABQAAACQAAAAg=</HashCode>
+      <FileName>ViewModels\Flux\CertificatesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.Flux.HolidaysViewModel" Collapsed="true">
+    <Position X="5.25" Y="2.25" Width="1.5" />
+    <Members>
+      <Property Name="HolidaysObservableCollection" Hidden="true" />
+      <Property Name="RequestHolidayCommand" Hidden="true" />
+      <Property Name="ScaleObsColl" Hidden="true" />
+      <Property Name="YearCombo" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IAAEAAAgAgAAAAQACAAAAQgoAAEAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Flux\HolidaysViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.ViewModels.Flux.ModifyPersDataViewModel" Collapsed="true">
+    <Position X="7" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEEAAABQAAAAAAAAQAAAAEIAAAACQAAACAAAAAg=</HashCode>
+      <FileName>ViewModels\Flux\ModifyPersDataViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRAM.UI.Views.Admin.HolidaycheckView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBCAAA=</HashCode>
+      <FileName>Views\Admin\HolidaycheckView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.Views.Admin.OverviewView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAwQAAAAAAAAAAAAAAAAABACAAA=</HashCode>
+      <FileName>Views\Admin\OverviewView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.Views.Admin.ReportsView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABACAAA=</HashCode>
+      <FileName>Views\Admin\ReportsView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.Views.AdminView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AdminView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.Views.FluxView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\FluxView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.Views.HomeView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\HomeView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.Views.LoginView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\LoginView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.Views.ProfileView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ProfileView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.Views.RequestHoliday" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\RequestHolidayView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.Views.Flux.CertificatesView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Flux\CertificatesView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.Views.Flux.HoldaysView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Flux\HoldaysView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HRAM.UI.Views.Flux.ModifyPersDataView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Flux\ModifyPersDataView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -23,7 +23,7 @@ namespace HRAM.UI.ViewModels
             return employee.UserId;
         }
         public static Employee GetEmployee()
-        {
+        { 
             return employee;
         }
         public void PopulateEm()

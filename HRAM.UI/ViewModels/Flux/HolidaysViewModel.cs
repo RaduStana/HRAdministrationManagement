@@ -71,6 +71,8 @@ namespace HRAM.UI.ViewModels.Flux
         {
             foreach (var item in holidays)
                 item.DiffDays = AvailableDays(item);
+            holidays = DataAccess.GetHolidays();
+            holidaysObservableCollection = new ObservableCollection<Holiday>(holidays);
         }
         public ObservableCollection<CountHolidayScales> ScaleObsColl
         {

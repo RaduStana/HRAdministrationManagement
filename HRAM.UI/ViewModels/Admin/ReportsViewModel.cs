@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRAM.UI.ViewModels.Admin
 {
-    public class ReportsViewModel
+    public class ReportsViewModel : BindableBase
     {
     }
 }

@@ -13,7 +13,7 @@
             <ColumnDefinition Width="80"></ColumnDefinition>
             <ColumnDefinition Width="70"></ColumnDefinition>
             <ColumnDefinition Width="150"></ColumnDefinition>
-            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition Width="20"></ColumnDefinition>
         </Grid.ColumnDefinitions>
@@ -42,11 +42,11 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content=" "/>
-                    <Separator Margin="60 0"/>
+                    <Separator Margin="30 0"/>
                     <Label Content="Total  Days"/>
-                    <Separator Margin="70 0"/>
+                    <Separator Margin="30 0"/>
                     <Label Content="Days"/>
-                    <Separator Margin="100 0"/>
+                    <Separator Margin="30 0"/>
                     <Label Content="Difference"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
