@@ -27,41 +27,32 @@ namespace HRAM.UI.Views
         }
         public static String _EmailLog;
 
-        private void LogIn_Click(object sender, RoutedEventArgs e)
-        {
+        private void LogIn_Click(object sender, RoutedEventArgs e){
             SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=HRAMDATA; Integrated Security=True;");
-            try
-            {
+            try{
                 _EmailLog = EmailAddress.Text;
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
                 string query = "user_Login";
-                SqlCommand sqlCmd = new SqlCommand(query, sqlCon)
-                {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon){
                     CommandType = CommandType.StoredProcedure
                 };
                 sqlCmd.Parameters.AddWithValue("@Email", EmailAddress.Text);
                 sqlCmd.Parameters.AddWithValue("@Password", Password.Password);
-
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
-                if (count == 1)
-                {
+                if (count == 1){
                     MainWindow MainWindowView = new MainWindow();
                     MainWindowView.Show();
                     System.Windows.Forms.Application.Exit();
                     Window.GetWindow(this).Close();
                 }
                 else
-                {
-                    MessageBox.Show("Username or password is incorrect.");
-                }
+                    MessageBox.Show("Email or password is incorrect.");
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 MessageBox.Show(ex.Message);
             }
-            finally
-            {
+            finally{
                 sqlCon.Close();
             }
         }

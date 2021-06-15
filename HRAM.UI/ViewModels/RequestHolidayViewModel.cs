@@ -12,23 +12,19 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows;
 
-namespace HRAM.UI.ViewModels
+    namespace HRAM.UI.ViewModels
 {
     public class RequestHolidayViewModel : BindableBase
     {
-        public static RequestHolidayViewModel Instance { get; } = new RequestHolidayViewModel();
         public ICommand GenerateHolidayCommand { get; }
         public RequestHolidayViewModel()
         {
-            GenerateHolidayCommand = new ViewModelCommands(ButtonGenerateHoliday);
+            GenerateHolidayCommand = new ViewModelCommands(ButtonGenerateHolidayComm);
         }
-        private static Holiday hol = null;
-
-        public void InsertObjIntoDb(Holiday hol)
-        {
+        public void InsertObjIntoDb(Holiday hol){
+            HolidaysViewModel.holidaysObservableCollection.Add(hol);
             SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=HRAMDATA; Integrated Security=True;");
-            try
-            {
+            try{
                 string q = "INSERT INTO Holiday (DateOfStart, DateOfFinish, Type, Reason, UserId, State) VALUES (@DateOfStart, @DateOfFinish, @Type, @Reason, @UserId, @State)";
                 SqlCommand sqlCommand = new SqlCommand(q, sqlCon);
                 sqlCommand.CommandType = CommandType.Text;
@@ -38,25 +34,19 @@ namespace HRAM.UI.ViewModels
                 sqlCommand.Parameters.AddWithValue("@Reason", hol.Reason);
                 sqlCommand.Parameters.AddWithValue("@UserId", ProfileViewModel.GetEmployeeUserId());
                 sqlCommand.Parameters.AddWithValue("@State", "neaprobat");
-
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
-
                 sqlCommand.ExecuteNonQuery();
             }
-            catch (SqlException ex)
-            {
+            catch (SqlException ex){
                 MessageBox.Show(ex.Message);
             }
-            finally
-            {
+            finally{
                 sqlCon.Close();
             }
         }
-        public void ButtonGenerateHoliday()
-        {
-            hol = new Holiday
-            {
+        public void ButtonGenerateHolidayComm() {
+            Holiday hol = new Holiday{
                 Type = tip,
                 DateOfStart = start,
                 DateOfFinish = finish,
@@ -66,10 +56,10 @@ namespace HRAM.UI.ViewModels
             TimeSpan diff;
             diff = hol.DateOfFinish - hol.DateOfStart;
             hol.DiffDays = diff.Days;
-            HolidaysViewModel.holidaysObservableCollection.Add(hol);
             InsertObjIntoDb(hol);
-            System.Windows.MessageBox.Show("Cererea de concediu a fost generata!");
+            MessageBox.Show("Cererea de concediu a fost generata!");
         }
+        public static RequestHolidayViewModel Instance { get; } = new RequestHolidayViewModel();
         private string comm;
         public string Comm
         {

@@ -27,19 +27,17 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
-        
         <TextBlock Grid.Row="1" Grid.Column="1">Type</TextBlock>
-        <ComboBox ItemsSource="{Binding TypeCombo}" Grid.Row="2" Grid.Column="1"></ComboBox>
-
+        <ComboBox ItemsSource="{Binding TypeCombo}" Grid.Row="2" Grid.Column="1"/>
         <TextBlock Grid.Row="4" Grid.Column="1">Key employee</TextBlock>
-        <TextBox Text="{Binding KeyEmployee, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="5" Grid.Column="1"></TextBox>
-        
+        <TextBox Text="{Binding KeyEmployee, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" 
+                 Grid.Row="5" Grid.Column="1"/>
         <TextBlock Grid.Row="1" Grid.Column="3">Date</TextBlock>
-        <DatePicker Text="{Binding Date, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="2" Grid.Column="3"></DatePicker>
-        
+        <DatePicker Text="{Binding Date, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" 
+                    Grid.Row="2" Grid.Column="3"/>
         <TextBlock Grid.Row="4" Grid.Column="3">Reason</TextBlock>
-        <TextBox Text="{Binding Reason, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="5" Grid.Column="3"></TextBox>
-
+        <TextBox Text="{Binding Reason, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" 
+                 Grid.Row="5" Grid.Column="3"/>
         <Button Command="{Binding SubmitCommand}" Grid.Row="7" Grid.Column="3">Submit</Button>
     </Grid>
 </UserControl>

@@ -14,18 +14,32 @@ using System.Windows.Input;
 
 namespace HRAM.UI.ViewModels.Flux 
 {
-    public class HolidaysViewModel : BindableBase
-    {
-        public HolidaysViewModel()
-        {
+    public class HolidaysViewModel : BindableBase{
+        public HolidaysViewModel(){
             RequestHolidayCommand = new ViewModelCommands(ReqHolComm);
             PopulateHoliday();
             PopulateScales();
         }
+        private ObservableCollection<CountHolidayScales> scaleObsColl = new ObservableCollection<CountHolidayScales>();
         public static List<Holiday> holidays = DataAccess.GetHolidays();
         public static ObservableCollection<Holiday> holidaysObservableCollection = new ObservableCollection<Holiday>(holidays);
-        private ObservableCollection<CountHolidayScales> scaleObsColl = new ObservableCollection<CountHolidayScales>();
         public ICommand RequestHolidayCommand { get; }
+        public void ReqHolComm(){
+            var requestHolidayView = new RequestHoliday();
+            Window window = new Window(){
+                Content = requestHolidayView,
+                Title = $"Request Holiday",
+                Height = 550,
+                Width = 1000
+            };
+            try{
+                window.ShowDialog();
+            }
+            catch { 
+                MessageBox.Show("Request Holiday Window didn't pop-up.");
+            }
+        }
+
         public void PopulateScales()
         {
             CountHolidayScales HolYear = new CountHolidayScales();
@@ -42,25 +56,6 @@ namespace HRAM.UI.ViewModels.Flux
             scaleObsColl.Add(TotalHol);
             scaleObsColl.Add(RemainingHol);
         }
-        public void ReqHolComm()
-        {
-            var diagScriptView = new RequestHoliday();
-            Window window = new Window()
-            {
-                Content = diagScriptView,
-                Title = $"Request Holiday",
-                Height = 550,
-                Width = 1000
-            };
-            try
-            {
-                window.ShowDialog();
-            }
-            catch
-            {
-                System.Windows.MessageBox.Show("Request Holiday Window didn't pop-up.");
-            }
-        }
         public int AvailableDays(Holiday item)
         {
             TimeSpan diff;
@@ -69,9 +64,9 @@ namespace HRAM.UI.ViewModels.Flux
         }
         public void PopulateHoliday()
         {
+            holidays = DataAccess.GetHolidays();
             foreach (var item in holidays)
                 item.DiffDays = AvailableDays(item);
-            holidays = DataAccess.GetHolidays();
             holidaysObservableCollection = new ObservableCollection<Holiday>(holidays);
         }
         public ObservableCollection<CountHolidayScales> ScaleObsColl

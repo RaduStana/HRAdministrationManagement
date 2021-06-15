@@ -30,6 +30,6 @@ namespace HRAM.UI.Models
         public int ManId { get; set; }
         public int DepId { get; set; }
         public int HolId { get; set; }
-        public int Status { get; set; }
+        public int State { get; set; }
     }
 }

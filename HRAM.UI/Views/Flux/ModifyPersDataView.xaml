@@ -26,17 +26,18 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="1" Grid.Column="1">First Name:</TextBlock>
-        <TextBox Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="1" Grid.Column="2"/>
-
+        <TextBox Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                 Grid.Row="1" Grid.Column="2"/>
         <TextBlock Grid.Row="2" Grid.Column="1">Last Name:</TextBlock>
-        <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="2" Grid.Column="2"/>
-
+        <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                 Grid.Row="2" Grid.Column="2"/>
         <TextBlock Grid.Row="3" Grid.Column="1">Address:</TextBlock>
-        <TextBox Text="{Binding Address, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="3" Grid.Column="2"/>
-
+        <TextBox Text="{Binding Address, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                 Grid.Row="3" Grid.Column="2"/>
         <TextBlock Grid.Row="4" Grid.Column="1">Phone Number:</TextBlock>
-        <TextBox Text="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="4" Grid.Column="2"/>
-
-        <Button Command="{Binding SubmitUpdateCommand}" Content="Submit Updates!" Grid.Row="6" Grid.Column="3"/>
+        <TextBox Text="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                 Grid.Row="4" Grid.Column="2"/>
+        <Button Command="{Binding SubmitUpdateCommand}" Content="Submit Updates!" Grid.Row="6"
+               Grid.Column="3"/>
     </Grid>
 </UserControl>

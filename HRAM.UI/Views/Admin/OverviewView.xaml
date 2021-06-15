@@ -28,23 +28,21 @@
             <RowDefinition Height="auto"/>
             <RowDefinition />
             <RowDefinition Height="25"/>
-        </Grid.RowDefinitions>
-        
-        <Label Content="Admin Overview Commands" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7"/>
+        </Grid.RowDefinitions>        
+        <Label Content="Admin Overview Commands" HorizontalAlignment="Center"
+               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7"/>
         <Label Content="First Name" Grid.Row="2" Grid.Column="1"/>
         <Label Content="Last Name" Grid.Row="3" Grid.Column="1"/>
         <Label Content="Email" Grid.Row="4" Grid.Column="1"/>
-        <Label Content="Password" Grid.Row="5" Grid.Column="1"/>
-        
+        <Label Content="Password" Grid.Row="5" Grid.Column="1"/>        
         <TextBox x:Name="firstname_txt" Grid.Row="2" Grid.Column="2"/>
         <TextBox x:Name="lastname_txt" Grid.Row="3" Grid.Column="2"/>
         <TextBox x:Name="email_txt" Grid.Row="4" Grid.Column="2"/>
         <PasswordBox x:Name="pass_txt" Grid.Row="5" Grid.Column="2"/>
-
         <Label Content="UserId" Grid.Row="7" Grid.Column="3"/>
         <TextBox x:Name="userid_txt" Grid.Row="7" Grid.Column="4"/>
-
-        <DataGrid Background="White" x:Name="datagrid" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="4" Grid.RowSpan="5"/>
+        <DataGrid Background="White" x:Name="datagrid" Grid.Row="2" Grid.Column="3" 
+                  Grid.ColumnSpan="4" Grid.RowSpan="5"/>
         <Button Click="Insert_click" Content="Insert" Grid.Row="8" Grid.Column="3"/>
         <Button Click="Delete_click" Content="Delete" Grid.Row="8" Grid.Column="4"/>
         <Button Click="Update_click" Content="Update" Grid.Row="8" Grid.Column="5"/>

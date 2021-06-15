@@ -44,7 +44,6 @@
             <views:ProfileView DataContext="{Binding}"/>
         </DataTemplate>
     </Window.Resources>
-    
     <Window.Triggers>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonOpenMenu">
             <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
@@ -78,7 +77,7 @@
                     <StackPanel Width="150">
                         <Button Content="Admin Settings" Command="{Binding AdminCommand}"/>
                         <Separator/>
-                        <Button Content="Logout" Command="{Binding LoginCommand}"/>
+                        <Button Content="Logout" Click="LogOut_Click"/>
                         <Label Content="MainWindowView" Visibility="Hidden"/>
                     </StackPanel>
                 </materialDesign:PopupBox>

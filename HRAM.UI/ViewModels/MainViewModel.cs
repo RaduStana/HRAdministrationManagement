@@ -13,20 +13,16 @@ namespace HRAM.UI.ViewModels
 {
     public class MainViewModel : BindableBase
     {
-        public ICommand LoginCommand { get; }
         public ICommand AdminCommand { get; }
         public object CurrentView { get; set; }
         public static MainViewModel Instance { get; } = new MainViewModel();
         public ICommand ListSelectionChangedCommand { get; set; }
-        public MainViewModel()
-        {
+        public MainViewModel(){
             CurrentView = new HomeViewModel();
-            LoginCommand = new ViewModelCommands(LoginComm);
             AdminCommand = new ViewModelCommands(AdminComm);
             ListSelectionChangedCommand = new DelegateCommand(Comm);
         }
-        private void Comm(object args)
-        {
+        private void Comm(object args){
             SelectionChangedEventArgs a = (SelectionChangedEventArgs)args;
             ListViewItem listViewItem = (ListViewItem)a.AddedItems[0];  
             if("Dashboard".Equals(listViewItem.Name))
@@ -37,15 +33,15 @@ namespace HRAM.UI.ViewModels
                 CurrentView = new FluxViewModel();
             OnPropertyChanged("CurrentView");
         }
-        public void AdminComm()
-        {
-            CurrentView = new AdminViewModel();
-            OnPropertyChanged("CurrentView");
-        }
-        public void LoginComm()
-        {
-            CurrentView = new LoginViewModel();
-            OnPropertyChanged("CurrentView");
+        public void AdminComm(){
+            var state = ProfileViewModel.GetEmployee().State;
+            if (state == 1)
+            {
+                CurrentView = new AdminViewModel();
+                OnPropertyChanged("CurrentView");
+            }
+            else
+                MessageBox.Show("Access denied!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }

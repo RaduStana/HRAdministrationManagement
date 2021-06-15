@@ -10,9 +10,7 @@ namespace HRAM.UI.ViewModels
 {
     public abstract class BindableBase : INotifyPropertyChanged
     {
-
         public event PropertyChangedEventHandler PropertyChanged;
-
         protected void SetValue<T>(ref T backingField, T value, [CallerMemberName] String propertyName = null)
         {
             if(EqualityComparer<T>.Default.Equals(backingField, value))
@@ -20,7 +18,6 @@ namespace HRAM.UI.ViewModels
                 return;
             }
         }
-
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

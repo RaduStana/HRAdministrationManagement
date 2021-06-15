@@ -31,20 +31,20 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Label Content="Tip concediu" Grid.Row="1" Grid.Column="1"/>
-        <TextBox Text="{Binding Tip, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" />
-        
+        <TextBox Text="{Binding Tip, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" 
+                 VerticalAlignment="Top" />
         <Label Content="De la " Grid.Row="1" Grid.Column="3"/>
-        <DatePicker Text="{Binding Start, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" IsTodayHighlighted="True"  Grid.Row="2" Grid.Column="3" VerticalAlignment="Top"/>
-        
+        <DatePicker Text="{Binding Start, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" IsTodayHighlighted="True"  
+                    Grid.Row="2" Grid.Column="3" VerticalAlignment="Top"/>
         <Label Content="Pana la " Grid.Row="1" Grid.Column="5"/>
-        <DatePicker Text="{Binding Finish, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" IsTodayHighlighted="True" Grid.Row="2" Grid.Column="5" VerticalAlignment="Top"/>
-
+        <DatePicker Text="{Binding Finish, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" IsTodayHighlighted="True" 
+                    Grid.Row="2" Grid.Column="5" VerticalAlignment="Top"/>
         <Label Content="Inlocuitor" Grid.Row="3" Grid.Column="1"/>
-        <TextBox Text="{Binding Inlocuitor, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Top"/>
-        
+        <TextBox Text="{Binding Inlocuitor, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="4" Grid.Column="1" 
+                 VerticalAlignment="Top"/>
         <Label Content="Comentarii" Grid.Row="6" Grid.Column="1"/>
-        <TextBox Text="{Binding Comm, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3"/>
-
+        <TextBox Text="{Binding Comm, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="7" Grid.Column="1"
+                 Grid.ColumnSpan="3"/>
         <Button Content="Send!" Grid.Row="6" Grid.Column="5" Command="{Binding GenerateHolidayCommand}"/>
         <Button Content="Close!" Grid.Row="7" Grid.Column="5" Click="ButtonClose"/>
     </Grid>

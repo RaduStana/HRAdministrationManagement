@@ -27,7 +27,6 @@
             <RowDefinition Height="180"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        
         <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">Year</TextBlock>
         <ComboBox Grid.Row="2" Grid.Column="1" ItemsSource="{Binding YearCombo}" SelectedIndex="0" />
         <Label Grid.Row="3" Grid.Column="1" Content="From"/>
@@ -36,8 +35,8 @@
         <Label Grid.Row="3" Grid.Column="4" Content="Type"/>
         <Label Grid.Row="3" Grid.Column="5" Content="Comments"/>
         <Label Grid.Row="3" Grid.Column="6" Content="State"/>
-        <ListView ItemsSource="{Binding HolidaysObservableCollection,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" DisplayMemberPath="fullInfo" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="6"/>
-
+        <ListView ItemsSource="{Binding HolidaysObservableCollection,UpdateSourceTrigger=PropertyChanged,
+            Mode=TwoWay}" DisplayMemberPath="fullInfo" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="6"/>
         <GroupBox Header="Scales" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="6" >
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
@@ -59,9 +58,9 @@
                     </StackPanel>
                     <ListView FontSize="12" Height="auto" ItemsSource="{Binding ScaleObsColl,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" DisplayMemberPath="FullInfo"/>
                 </StackPanel>
-            </StackPanel>            
+            </StackPanel>
         </GroupBox>
-
-        <Button Grid.Column="1" Grid.Row="7" Content="Make a request" Command="{Binding RequestHolidayCommand}"/>
+        <Button Grid.Column="1" Grid.Row="7" Content="Make a request" 
+                Command="{Binding RequestHolidayCommand}"/>
     </Grid>
 </UserControl>

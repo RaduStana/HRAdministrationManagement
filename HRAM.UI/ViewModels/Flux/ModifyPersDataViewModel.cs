@@ -11,20 +11,16 @@ using System.Windows.Input;
 
 namespace HRAM.UI.ViewModels.Flux
 {
-    public class ModifyPersDataViewModel : BindableBase
-    {
+    public class ModifyPersDataViewModel : BindableBase{
         public static ModifyPersDataViewModel Instance { get; } = new ModifyPersDataViewModel();
         public ICommand SubmitUpdateCommand { get; }
-        public ModifyPersDataViewModel()
-        {
+        public ModifyPersDataViewModel(){
             SubmitUpdateCommand = new ViewModelCommands(ButtonSubmitUpdateCommand);
         }
-        public void ButtonSubmitUpdateCommand()
-        {
+        public void ButtonSubmitUpdateCommand() {
             SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=HRAMDATA; Integrated Security=True;");
             int userId = ProfileViewModel.GetEmployeeUserId();
-            try
-            {
+            try {
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
                 string query = "UPDATE dbo.[User] SET FirstName = '"+firstName+ "', LastName = '"+lastName+"', Adress = '"+address+"', PhoneNumber = '"+phoneNumber+"' WHERE UserId = '"+userId+"' ";
@@ -32,12 +28,10 @@ namespace HRAM.UI.ViewModels.Flux
                 sqlCmd.ExecuteNonQuery();
                 MessageBox.Show("Updates have been made!", "Updated" , MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            catch (SqlException ex)
-            {
+            catch (SqlException ex){
                 MessageBox.Show(ex.Message);
             }
-            finally
-            {
+            finally{
                 sqlCon.Close();
             }
         }

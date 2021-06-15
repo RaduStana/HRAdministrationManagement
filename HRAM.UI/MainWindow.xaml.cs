@@ -1,4 +1,5 @@
 ﻿using HRAM.UI.ViewModels;
+using HRAM.UI.Views;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -42,6 +43,16 @@ namespace HRAM.UI
         {
             Trace.WriteLine("ListViewItem Clicked: " + (sender as ListViewItem).Content);
         }
-        
+        private void LogOut_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new Window
+            {
+                Title = "My User Control Dialog",
+                Content = new LoginView()
+            };
+            System.Windows.Forms.Application.Exit();
+            Window.GetWindow(this).Close();
+            window.ShowDialog();
+        }
     }
 }
